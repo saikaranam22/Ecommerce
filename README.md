@@ -1,4 +1,4 @@
-# Testing - E-commerce Clothing Website
+# Ecommerce - Clothing Website
 
 This repository contains the source code for an e-commerce website specializing in clothing sales. The website provides a seamless shopping experience with various features for browsing, selecting, and purchasing clothing items.
 
@@ -38,4 +38,4 @@ This repository contains the source code for an e-commerce website specializing 
 
 ## License
 
-MIT License 
+MIT License

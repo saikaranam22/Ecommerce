@@ -47,8 +47,8 @@ const Navbar = () => {
 
         <div className="navbar-actions">
           <Link to="/cart" className="navbar-action">
-            <span className="material-icons">shopping_cart</span>
-            <span className="cart-count">0</span>
+            <i className="fas fa-shopping-cart"></i>
+            <span className="cart-count">2</span>
           </Link>
         </div>
       </div>

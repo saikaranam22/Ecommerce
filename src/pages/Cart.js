@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Cart.css';
 
-// Mock cart data
+// Mock cart data with real stock images
 const initialCartItems = [
   {
     id: 1,
     name: 'Classic White T-Shirt',
     price: 24.99,
-    image: 'https://via.placeholder.com/100x100?text=T-Shirt',
+    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80',
     quantity: 2,
     size: 'M',
     color: 'White'
@@ -17,7 +17,7 @@ const initialCartItems = [
     id: 3,
     name: 'Casual Hoodie',
     price: 49.99,
-    image: 'https://via.placeholder.com/100x100?text=Hoodie',
+    image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80',
     quantity: 1,
     size: 'L',
     color: 'Gray'

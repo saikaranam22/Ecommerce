@@ -3,56 +3,56 @@ import { Link } from 'react-router-dom';
 import '../styles/Home.css';
 import ProductCard from '../components/ProductCard';
 
-// Mock data for featured products
+// Mock data for featured products with real stock images
 const featuredProducts = [
   {
     id: 1,
     name: 'Classic White T-Shirt',
     price: 24.99,
-    image: 'https://via.placeholder.com/300x400?text=T-Shirt',
+    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
     category: 'T-Shirts'
   },
   {
     id: 2,
     name: 'Slim Fit Jeans',
     price: 59.99,
-    image: 'https://via.placeholder.com/300x400?text=Jeans',
+    image: 'https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
     category: 'Pants'
   },
   {
     id: 3,
     name: 'Casual Hoodie',
     price: 49.99,
-    image: 'https://via.placeholder.com/300x400?text=Hoodie',
+    image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
     category: 'Hoodies'
   },
   {
     id: 4,
     name: 'Summer Dress',
     price: 39.99,
-    image: 'https://via.placeholder.com/300x400?text=Dress',
+    image: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
     category: 'Dresses'
   }
 ];
 
-// Mock data for categories
+// Mock data for categories with real stock images
 const categories = [
   {
     id: 1,
     name: 'Men',
-    image: 'https://via.placeholder.com/300x300?text=Men',
+    image: 'https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
     link: '/products?category=men'
   },
   {
     id: 2,
     name: 'Women',
-    image: 'https://via.placeholder.com/300x300?text=Women',
+    image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
     link: '/products?category=women'
   },
   {
     id: 3,
     name: 'Accessories',
-    image: 'https://via.placeholder.com/300x300?text=Accessories',
+    image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
     link: '/products?category=accessories'
   }
 ];

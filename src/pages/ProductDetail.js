@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import '../styles/ProductDetail.css';
 
-// Mock products data
+// Mock products data with real stock images
 const products = [
   {
     id: 1,
     name: 'Classic White T-Shirt',
     price: 24.99,
-    image: 'https://via.placeholder.com/600x800?text=T-Shirt',
+    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
     category: 'T-Shirts',
     gender: 'men',
     description: 'A classic white t-shirt made from 100% premium cotton. Perfect for everyday wear, this comfortable and breathable t-shirt is a wardrobe essential.',
@@ -20,7 +20,7 @@ const products = [
     id: 2,
     name: 'Slim Fit Jeans',
     price: 59.99,
-    image: 'https://via.placeholder.com/600x800?text=Jeans',
+    image: 'https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
     category: 'Pants',
     gender: 'men',
     description: 'These slim fit jeans are designed for comfort and style. Made from high-quality denim with a touch of stretch for ease of movement.',
@@ -32,7 +32,7 @@ const products = [
     id: 3,
     name: 'Casual Hoodie',
     price: 49.99,
-    image: 'https://via.placeholder.com/600x800?text=Hoodie',
+    image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
     category: 'Hoodies',
     gender: 'men',
     description: 'Stay warm and comfortable in this casual hoodie. Features a soft fleece lining, adjustable hood, and kangaroo pocket.',
@@ -44,7 +44,7 @@ const products = [
     id: 4,
     name: 'Summer Dress',
     price: 39.99,
-    image: 'https://via.placeholder.com/600x800?text=Dress',
+    image: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
     category: 'Dresses',
     gender: 'women',
     description: 'A light and airy summer dress perfect for warm days. Features a floral pattern and comfortable fit.',
@@ -56,7 +56,7 @@ const products = [
     id: 5,
     name: 'Floral Blouse',
     price: 34.99,
-    image: 'https://via.placeholder.com/600x800?text=Blouse',
+    image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
     category: 'Tops',
     gender: 'women',
     description: 'A beautiful floral blouse with a relaxed fit. Perfect for both casual and semi-formal occasions.',
@@ -68,7 +68,7 @@ const products = [
     id: 6,
     name: 'Leather Jacket',
     price: 89.99,
-    image: 'https://via.placeholder.com/600x800?text=Jacket',
+    image: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
     category: 'Jackets',
     gender: 'men',
     description: 'A stylish leather jacket that adds an edge to any outfit. Features a comfortable fit and durable construction.',
@@ -80,7 +80,7 @@ const products = [
     id: 7,
     name: 'Pleated Skirt',
     price: 44.99,
-    image: 'https://via.placeholder.com/600x800?text=Skirt',
+    image: 'https://images.unsplash.com/photo-1583496661160-fb5886a13d77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
     category: 'Skirts',
     gender: 'women',
     description: 'A versatile pleated skirt that can be dressed up or down. Features a comfortable elastic waistband.',
@@ -92,7 +92,7 @@ const products = [
     id: 8,
     name: 'Leather Belt',
     price: 29.99,
-    image: 'https://via.placeholder.com/600x800?text=Belt',
+    image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
     category: 'Accessories',
     gender: 'unisex',
     description: 'A high-quality leather belt that complements any outfit. Features a classic buckle and durable construction.',
